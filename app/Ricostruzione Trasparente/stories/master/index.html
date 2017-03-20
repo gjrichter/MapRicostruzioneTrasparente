@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+  <title>IXMAPS Sample Story</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+
+  <link href="./assets/css/flat-ui.css" rel="stylesheet">
+  <link href="./story.css" rel="stylesheet">
+  <link href="./assets/css/icomoon.css" rel="stylesheet">
+  <link href="../../../../ui/libs/codemirror-3.16/lib/codemirror.css">
+  <link href="../../../../ui/libs/codemirror-3.16/lib/codemirror.css">
+
+  <style>
+	.theme-button {
+		color:#888888;
+	}
+	b, strong{
+		color:#aaa;
+	}
+  </style>
+</head>
+
+<body style="margin-top:3em">
+
+		<div id="story" style="margin-right:2em">
+
+			<h2 style="margin-top:1em">per<br> 'Ricostruzione Trasparente'</h2>
+			<h3>visualizzazioni di vari fonti raccolti nel WWW</h3>
+
+			<hr>
+			<div>
+				<ul>
+				<li>
+					<h4> &#9898; edifici agibili, non agibili o parzialmente non agibili<br>
+					<span style="margin-left:0.5em">(fonte: arcgis di una <a href="https://medium.com/visuallab/la-mappa-degli-edifici-inagibili-nei-comuni-del-sisma-in-centro-italia-d620fd509295#.gw9i6l9za" target="_blank">mappa</a> di repubblica.it)</span></h4>
+					<div style="margin:0.5em 0.5em;">
+					<a id="firstTheme" class="button" href='javascript:ixmaps.newTheme("",RT_nonagibili,"clear"
+						);' >non o parzialmente non agibili&nbsp;<span class="icon icon-close" style="font-size:0.7em;display:none"></span></a> |
+					<a id="firstTheme" class="button" href='javascript:ixmaps.newTheme("",RT_nonagibili_grid,"clear"
+						);' >griglia&nbsp;<span class="icon icon-close" style="font-size:0.7em;display:none"></span></a>
+					<br>
+					<a id="firstTheme" class="button" href='javascript:ixmaps.newTheme("",RT_agibili_nonagibili_totale_pie,"clear"
+						);' >agibile/nonagibile/nonvisionato - torte&nbsp;<span class="icon icon-close" style="font-size:0.7em;display:none"></span></a>
+					<br>
+					<!--
+					<a id="secondTheme" href='javascript:ixmaps.newTheme("",RT_agibili_nonagibili_symbols,"clear"
+						);' >agibili / non agibili</a>
+					<br>
+					<a id="secondTheme" href='javascript:ixmaps.newTheme("",RT_nonagibili_percent_dynalpha_quantile,"clear"
+						);' >non agibile - percent</a> |
+					<a id="secondTheme" href='javascript:ixmaps.newTheme("",RT_nonagibili_percent_dynalpha_popolazione_quantile,"clear"
+						);' > x pop</a> |
+					<a id="secondTheme" href='javascript:ixmaps.newTheme("",RT_nonagibili_percent_dynalpha_popolazione_pop_quantile,"clear"
+						);' > II</a>
+					<br>
+					-->
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_nonagibili_permille_dynalpha_popolazione_quantile,"clear"
+						);' >non agibile - per 1000 abitanti</a> |
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_nonagibili_permille_dynalpha_popolazione_pop_quantile,"clear"
+						);' > x pop</a> I
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_nonagibili_permille_dynalpha_popolazione_pop_circle,"clear"
+						);' > symb</a>
+					<br>
+
+
+
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_percent_nonagibili_pie,"clear"
+						);' >% non agibili - torte</a> |
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_percent_nonagibili_pie_size,"clear"
+						);' >sized</a>
+					<br>
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_nonagibili_hexbin,"clear"
+						);' >non agibili</a> |
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_nonagibili_x_mille_hexbin,"clear"
+						);' >non agibili x 1000 abitanti</a>
+
+				</li>
+				</ul>
+			</div>
+
+			<hr>
+			<div>
+				<ul>
+				<li>
+					<h4> &#9898; container per l'accoglienza temporanea</h4>
+					<span style="margin-left:0.5em">(fonte: <a href="http://www.protezionecivile.gov.it/jcms/it/view_new.wp?contentId=NEW62913" target="_blank">Dipartimento della Protezione Civile</a>)</span></h4>
+					<div style="margin:0.5em 0.5em;">
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_Container_Numeri_03_03_2017,"clear"
+					);' >finale 03.03.2017</a>
+				</li>
+				</ul>
+			</div>
+
+			<hr>
+			<div>
+				<ul>
+				<li>
+					<h4> &#9898; Marche - Contributi Autonoma Sistemazione</h4>
+					<span style="margin-left:0.5em">(fonte: <a href="http://www.regione.marche.it/Regione-Utile/Terremoto-Marche/Dati-sul-sisma/Contributi-Autonoma-Sistemazione-erogati" target="_blank">Regione Marche</a>)</span> stato 15.03.2017</h4>
+					<div style="margin:0.5em 0.5em;">
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE,"clear"
+					);' >totale x comune</a> |
+
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE_SHAPE,"clear"
+					);' >aree</a> |	
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE_MESE,"clear"
+					);' >x mesi</a>
+					<br>
+
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE_NUCLEIFAM,"clear"
+					);' >x nuclei familiari</a> |	
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE_PERSONA,"clear"
+					);' >x persona</a>
+					<br>
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE_NUMERO_PERSONE,"clear"
+					);' >numero persone / mese</a> |
+					<a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE_NUMERO_NUCLEIFAM,"clear"
+					);' >numero nuclei familiari / mese</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<br>
+		<br>
+	<div id="header"  style="position: fixed;top:0;left:10px;width:90%;height:40px;" >
+		<div class="container" style="margin-top:11px" >
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2">
+					<div class="header" aria-hidden="true">
+						<div class="linkSocialContainer" style="float:left">
+							<span class="linkContainer"></span>
+							<span class="shareBtns" style="font-size:24px">
+								<a href="javascript:ixmaps.popupShare()">
+								<i class="shareIcon blackHover share_facebook icon-facebook-squared" title="Share on Facebook" tabindex="-1"></i></a>
+								<a href="javascript:ixmaps.popupBookmarks()">
+								<i class="shareIcon blackHover share_twitter icon-bookmark" title="Open bookmarks dialog" tabindex="-1"></i></a>
+								<a href="javascript:ixmaps.popupShare()">
+								<i class="shareIcon blackHover share_bitly icon-share" title="Share a short link" tabindex="-1"></i></a>
+								<a href="javascript:ixmaps.loadStoryTool('./filter.html')" >
+								<i class="shareIcon blackHover share_bitly icon-filter" title="Filter" tabindex="-1" style="margin-left:0.2em" ></i></a>
+								<a href="javascript:ixmaps.loadStoryTool('./layer.html')" >
+								<i class="shareIcon blackHover share_bitly icon-map" title="Info" tabindex="-1" style="margin-left:0.2em" ></i></a>
+								<a href="javascript:ixmaps.loadStoryTool('./about.html')" >
+								<i class="shareIcon blackHover share_bitly icon-info" title="Info" tabindex="-1" style="margin-left:0.2em" ></i></a>
+							</span>
+						</div>
+						<div class="linkSocialContainer" style="float:right;margin-right:-1.5em;margin-top:0.2em;">
+							<span class="linkContainer"></span>
+							<span class="shareBtns" style="font-size:18px">
+									<a href="javascript:ixmaps.fullScreen()">
+								<i class="shareIcon blackHover share_bitly icon-close" title="Info" tabindex="-1" style="margin-left:0.2em" ></i></a>
+							</span>
+						</div>
+						<div class="logoContainer" style="float:right;margin-right:-10px;display:none">
+							<table>
+								<tr>
+									<td class="logoWrapper">
+										<a class="logoLink" target="_blank" tabindex="-1">
+											<img class="logoImg" src="" height="60px" style="opacity:0.8"/>
+										</a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="./themes.js"></script>
+
+	<!-- ixmaps iframe connect JavaScript
+    ================================================== -->
+	<script type="text/javascript">
+
+		// ==============================================
+		// initialization part - pleas keep the functions 
+		// ==============================================
+
+		var ixmaps = null;
+		if ( window.opener ){
+			ixmaps = window.opener.ixmaps;
+		}else
+		if ( parent ){
+			ixmaps = parent.window.ixmaps;
+		}
+		else{
+			alert("error: missing parent window for themes !");
+		}
+
+		// don't synchronise multiple map frames
+		ixmaps.setSyncMultiMaps(false);
+
+		var nLegendDiv = 0;
+		var legendA = Array(0);
+		ixmaps.setLegendDiv = function(n){
+			nLegendDiv = n;
+		};
+
+		ixmaps.setLoading = function(){
+			ixmaps.showLoading("... caricando ...");
+		};
+
+		__do_firstTheme = function() {
+			$('#firstTheme').click();
+			eval($('#firstTheme').attr("href"));
+		};
+
+		// ------------------------------
+		// if map ready, parametrize
+		// ------------------------------
+
+		ixmaps.onMapReady = function(){
+
+			ixmaps.setMapFeatures("popupdelay:250;flushPaintShape:500;flushChartDraw:1000;objectscaling:dynamic");
+			ixmaps.setLocalString("... processing ...","");
+			ixmaps.setLocalString("... creating theme ...",";-)");
+			ixmaps.setLocalString("loading data ...","caricando dati ...");
+			ixmaps.setLocalString("data loaded ...","");
+			ixmaps.setLocalString("cleaning up ...","");
+			ixmaps.setScaleParam("lineScaling:0.1;labelScaling:0.7");
+
+            ixmaps.setView([42.889278471686666,13.465118408203125],9); 
+
+			ixmaps.setAutoSwitchInfo(true);
+
+			__do_firstTheme();
+		};
+
+		// ------------------------------
+		// flag to parent that story is ready	
+		// ------------------------------
+
+		ixmaps.onStoryReady();
+
+		// ============================================
+		// end of initialization part 
+		// ============================================
+
+
+		// load themes script
+		$.getScript("../../../../ui/js/tools/legend.js",function(){
+			$.getScript("./index.js",function(){
+			});
+		});
+
+		// do what you want ----->
+
+		// --------------------------------------------------------------
+		// define click extension to
+		// check/highlight the theme button 
+		// --------------------------------------------------------------
+
+		// array to store the clicked objects for onRemoveTheme callback
+		var clickA = new Array(0);
+
+		// store the last clicked object for onNewTheme callback
+		var lastClicked = null;
+		$("a").click(function () {
+			if ( String($(this).attr("href")).match(/newtheme/i) ){
+				lastClicked = $(this);
+			}
+		});
+		// change 'button' style to show presence of theme
+		__setThemeButtonStyle = function(buttonObj,fFlag){
+			if ( fFlag ){
+				buttonObj.css("color","#ffffff");
+				buttonObj.css("background","#1D76B0");
+				buttonObj.css("line-height","0.8");
+				buttonObj.children().last().css("display","inline");
+			}else{
+				buttonObj.css("color","");
+				buttonObj.css("background","");
+				buttonObj.children().last().css("display","none");
+			}
+		}
+
+		// ------------------------------
+		// do something on theme creation
+		// ------------------------------
+
+		// intercept theme creation, to mark active themes
+		ixmaps.htmlgui_onNewTheme = function(szId){
+			__setThemeButtonStyle(lastClicked,true);
+			clickA[szId] = lastClicked;
+			if ( actThemeId ){
+				ixmaps.removeTheme(actThemeId);
+			}
+			actThemeId = szId;
+		};
+
+		// intercept theme deletion, to remove active themes mark
+		ixmaps.htmlgui_onRemoveTheme = function(szId){
+			if ( clickA[szId] ){
+				__setThemeButtonStyle(clickA[szId],false);
+				clickA[szId] = null;
+				lastClicked  = null;
+			}
+			ixmaps.removeLegendDiv(szId);
+			ixmaps.setTitle("");
+		};
+
+		$("#anni").next().toggle();
+
+		var __code = false;
+		ixmaps.showThemeCode = function(){
+			if ( __code ){
+				$("#theme-code-embed").attr("src","");	
+				$("#theme-code-embed").css("width","100%");
+				$("#theme-code-embed").css("height","0px");
+				__code = false;
+			}else{
+				$("#theme-code-embed").attr("src","../../../../ui/html/theme_editor.html");	
+				$("#theme-code-embed").css("width","100%");
+				$("#theme-code-embed").css("height","950px");
+				__code = true;
+			}
+		};
+
+		ixmaps.popupBookmarks = function(){
+			var szElement = "bookmarks";	
+			ixmaps.embeddedApi.embeddedApi.openDialog(null,'bookmarks','./history.html','Bookmarks','50%,103','35%','500');
+		};
+
+		ixmaps.popupShare = function(){
+			var szElement = "bookmarks";	
+			ixmaps.embeddedApi.embeddedApi.openDialog(null,'share','./share.html','Share','50%,103',350,450);
+		};
+
+		ixmaps.popupInfo = function(){
+			var szElement = "bookmarks";	
+			ixmaps.embeddedApi.embeddedApi.openDialog(null,'info','../doc/help_en.html','Help','10,103',500,600);
+		};
+
+	</script>
+
+	</body>
+</html>

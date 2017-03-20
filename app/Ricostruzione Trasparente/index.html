@@ -1,0 +1,54 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="iso-8859-1">	
+	<title>ixmaps</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+
+    <link rel="shortcut icon" href="../../ui/images/ixmaps_logo.png">
+	<script type="text/javascript" src = "../../ui/libs/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src = "../../ui/js/htmlgui_api.js"></script>
+
+	<script>
+
+	__ui		= "../../ui/html/main_sync_story_frame.html?basemap=ll&maptype=OpenStreetMap%20-%20wikipedia&minimal=1&options=1&tilemap=show&themelegend=0&silent=0&search=Italy&local=maps/svg/resources"; 
+	__map		= "../../maps/svg/maps/ISTAT 2014 Comuni/italia_comuni_2014_g_nome.svgz";
+	__story		= "../../app/Ricostruzione Trasparente/stories/master/index.html";
+	__bound		= ""; //"map.Api.doZoomMapToGeoBounds(35.63944108928992,11.480712912940987,43.516688516901034,20.621337868309013);";
+	__attribute	= "powered by iXMaps"; 
+	__resize = function(){
+			$("#map-frame").attr("height",window.innerHeight-5+"px");
+			$("#map-frame").attr("width",window.innerWidth+"px");
+	}
+	$(document).ready(function() {
+			__resize();
+			$("#map-frame").attr("src",__ui+
+					"&svggis="+__map+
+					"&story="+__story+
+					"&sidebar=35%&overlap=0"+
+					"&bookmark="+__bound+
+					"&attribution="+__attribute);
+
+			__szBookmark = null;
+	});
+	$(window).resize(function() {
+			__resize();
+	});
+
+	</script>
+</head>
+
+
+<body style="margin:0px;padding:0px;overflow:hidden;">
+
+	<!-- Content -->
+	<div >
+		<iframe id="map-frame" width="100%" height="640px" style="border:0;" src= ></iframe>
+	</div>
+	<!-- fine Content -->
+
+
+</body>
+
+</html>
