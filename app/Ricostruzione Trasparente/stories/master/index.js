@@ -38,9 +38,9 @@
 			}
 		}
 		szHtml = "";
-		szHtml += themeObj.szTitle;
+		szHtml += "<div class='inline-legend-title'>"+themeObj.szTitle+"</div>";
 		if ( themeObj.szSnippet && typeof(themeObj.szSnippet)!="undefined"){
-			szHtml += "<br><span style=\"font-size:0.8em;line-height:1.2em\"><em>"+themeObj.szSnippet+"</em></span>";
+			szHtml += "<div class='inline-legend-snippet'>"+themeObj.szSnippet+"</div>";
 		}
 
 		if ( ixmaps.legend.makeColorLegendHTML ){
@@ -59,7 +59,7 @@
 		szHtml += "<div id='map-legend-footer'>";
 //		szHtml += ixmaps.htmlgui_onLegendFooter ? ixmaps.htmlgui_onLegendFooter(szId,themeObj,ixmaps.embeddedApi.embeddedApi.getThemeDefinitionObj(szId)) : "";
 		if ( themeObj.szDescription && typeof(themeObj.szDescription)!="undefined"){
-			szHtml += "<span style=\"font-size:0.8em;line-height:1.2em\"><em>"+themeObj.szDescription+"</em></span>";
+			szHtml += "<div class='inline-legend-snippet'>"+themeObj.szDescription+"</div>";
 		}
 		szHtml += "</div>";
 

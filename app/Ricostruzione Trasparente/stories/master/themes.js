@@ -95,7 +95,44 @@
 		"title": "EDIFICI_AGIBILI, NON AGIBILI, TOTALE"
 		}
 	};
-	
+
+	var RT_agibili_nonagibili_multibubble =		
+	{
+	"layer": "com2011_s",
+	"field": "EDIFICI_AGIBILI|EDIFICI_NON__AGIBILI___PARZIALM",
+	"field100": "TOTALE",
+	"style": {
+		"type": "CHART|SYMBOL|SEQUENCE|BASE|SORT|UP|ZEROISVALUE|NEGATIVEISVALUE|AUTOCOMPLETE|VALUES",
+		"colorscheme": [
+			"green",
+			"red"],
+		"shadow": "true",
+		"dbtable": "themeDataObj",
+		"dbtableUrl": "https://corsme.herokuapp.com/http://docs.google.com/spreadsheets/d/1dnppgKPXcvAkLWTgSqz6NlkgkKXMpfbsZxey1qnvjUM/export?format=csv",
+		"dbtableType": "csv",
+		"datacache": "true",
+		"itemfield": "COMUNE",
+		"lookupfield": "COMUNE",
+		"symbols": [
+			"circle"],
+		"values": [
+			"EDIFICI_AGIBILI",
+			"EDIFICI_NON__AGIBILI___PARZIALM"],
+		"label": [
+			"Edifici agibili",
+			"Edifici non o solo parzialmente agibili"],
+		"units": "%",
+		"normalsizevalue": "5308.641975308641",
+		"scale": "1",
+		"rangescale": "3",
+		"labelfield": "COMUNE",
+		"sizefield": "TOTALE",
+		"labelupper": "1:500000",
+		"fadenegative": "1",
+		"title": "EDIFICI_AGIBILI, NON AGIBILI, TOTALE"
+		}
+	};
+
 	var RT_agibili_percent_dynalpha_quantile =  
 	{
 	"layer": "com2011_s",
@@ -232,11 +269,12 @@
 		"type": "CHOROPLETHE|PERMILLE|QUANTILE|DOPACITYMAX|ZEROISVALUE|NEGATIVEISVALUE|NOINLINETEXT|VALUEBACKGROUND|VALUES",
 		"colorscheme": [
 			"5",
-			"RGB(74,74,255)",
-			"RGB(245,41,38)",
-			"dynamic"],
-		"opacity": "0.7",
-		"fillopacity": "0.1",
+			"#80AF9B",
+			"#FF3D62",
+			"3colors",
+			"#FBCDAB"],
+		"opacity": "1",
+		"fillopacity": "0.49617562500000006",
 		"shadow": "true",
 		"dbtable": "themeDataObj",
 		"dbtableUrl": "https://corsme.herokuapp.com/http://docs.google.com/spreadsheets/d/1dnppgKPXcvAkLWTgSqz6NlkgkKXMpfbsZxey1qnvjUM/export?format=csv",
@@ -248,12 +286,12 @@
 		"scale": "1",
 		"alphafield100": "$density$",
 		"dopacitypow": "4",
-		"dopacityscale": "8",
+		"dopacityscale": "2",
 		"textcolor": "white",
 		"title": "EDIFICI NON AGIBILE x 1000",
 		"snippet": "Edifici non agibili o parzialmente agibili / 1000 abitanti"
 		}
-	}
+	};
 	var RT_nonagibili_permille_dynalpha_popolazione_pop_quantile =  
 	{
 	"layer": "com2011_s",
@@ -609,7 +647,7 @@
 		"gridwidthpx": "30",
 		"title": "Container per l'accoglienza temporanea",
 		"snippet": "Fonte: Sito del Dipartimento della Protezione Civile - Presidenza del Consiglio dei Ministri<br>Licenza: CCBY 4.0<br> data:2017-03-03",
-		"description":"posizioni e numeri dei container possono essere aggreagti rispetto al zoom della mappa; andare sul posto per vedere le posizione original"
+		"description":"posizioni e numeri dei container possono essere aggreagti rispetto allo zoom della mappa; ingrandisci per vedere le posizioni originali"
 		}
 	};
 
@@ -825,7 +863,7 @@
 		"boxupper": "1:200000",
 		"aggregationfield": "Comune",
 		"title": "Contributi autonoma sistemazione",
-		"snippet": "Nuclei familiari soggetti a ordinanza di sgombero di prima unità abitativa dichiarata inagibile a seguito degli eventi sismici Agosto Ottobre 2016 (O.C.D.P.C. 388/2016) - pagati al Comune fino all'ultimo rendiconto <br> <br> Numero di persone per mese (media di 3 mesi)"
+		"snippet": "Nuclei familiari soggetti a ordinanza di sgombero di prima unità abitativa dichiarata inagibile a seguito degli eventi sismici Agosto Ottobre 2016 (O.C.D.P.C. 388/2016) - pagati al Comune fino all'ultimo rendiconto.</p><p>Numero di persone per mese (media di 3 mesi)"
 		}
 	}
 
@@ -860,6 +898,6 @@
 		"boxupper": "1:200000",
 		"aggregationfield": "Comune",
 		"title": "Contributi autonoma sistemazione",
-		"snippet": "Nuclei familiari soggetti a ordinanza di sgombero di prima unità abitativa dichiarata inagibile a seguito degli eventi sismici Agosto Ottobre 2016 (O.C.D.P.C. 388/2016) - pagati al Comune fino all'ultimo rendiconto <br> <br> Nuclei familiari per mese (media di 3 mesi)"
+		"snippet": "Nuclei familiari soggetti a ordinanza di sgombero di prima unità abitativa dichiarata inagibile a seguito degli eventi sismici Agosto Ottobre 2016 (O.C.D.P.C. 388/2016) - pagati al Comune fino all'ultimo rendiconto.</p><p>Nuclei familiari per mese (media di 3 mesi)"
 		}
 	}
