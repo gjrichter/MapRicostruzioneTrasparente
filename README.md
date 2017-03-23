@@ -53,6 +53,8 @@ come si vede, il tema prende i dati direttamenta da un foglio di *google docs* (
 <a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE,"clear");' >totale x comune</a>
  ```
  
- * il primo argomento "" e vouto, potrebbe contenere l'id della mappa in caso ci sono più di una mappa (p.e.due mappe accanto per due anni diversi)
- * il secondo argomento e il nome del oggetto JSON, che definisce il tema
- * "clear" pulisce la mappa prima di presentare il tema; se lascio l'argomento, il tema viene aggiunto 
+ * il primo argomento "" e vouto; potrebbe contenere il nome della mappa in caso ci sono più di una mappa (p.e. due mappe accanto per due anni diversi)
+ * il secondo argomento è il nome del oggetto JSON che definisce il tema
+ * "clear" pulisce la mappa prima di presentare il tema; senza 'clear' il tema viene aggiunto 
+ 
+ Spero di poter aggiungere presto il link alla documentazione del dialetto JSON per i temi 
