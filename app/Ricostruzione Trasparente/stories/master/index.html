@@ -39,6 +39,7 @@
 				<li>
 					<h4> &#9898; edifici agibili, non agibili o parzialmente non agibili<br>
 					<span style="margin-left:0.5em">(fonte: arcgis di una <a href="https://medium.com/visuallab/la-mappa-degli-edifici-inagibili-nei-comuni-del-sisma-in-centro-italia-d620fd509295#.gw9i6l9za" target="_blank">mappa</a> di repubblica.it)</span></h4>
+					<p class="comment">il dataset contiene per ogni comune coinvolto: TOTALE, EDIFICI_AGIBILI, EDIFICI_NON_AGIBILI_PARZIALM e la popolazione residente</p>
 					<div style="margin:0.5em 0.5em;">
 					<a id="firstTheme" class="button" href='javascript:ixmaps.newTheme("",RT_nonagibili,"clear"
 						);' >non o parzialmente non agibili&nbsp;<span class="icon icon-close" style="font-size:0.7em;display:none"></span></a> |
@@ -46,7 +47,9 @@
 						);' >griglia&nbsp;<span class="icon icon-close" style="font-size:0.7em;display:none"></span></a>
 					<br>
 					<a id="firstTheme" class="button" href='javascript:ixmaps.newTheme("",RT_agibili_nonagibili_multibubble,"clear"
-						);' >agibile/nonagibile percentuali&nbsp;<span class="icon icon-close" style="font-size:0.7em;display:none"></span></a>
+						);' >agibile/nonagibile percentuali&nbsp;<span class="icon icon-close" style="font-size:0.7em;display:none"></span></a> |
+					<a id="firstTheme" class="button" href='javascript:ixmaps.newTheme("",RT_agibili_nonagibili_totale_pie,"clear"
+						);' >torte&nbsp;<span class="icon icon-close" style="font-size:0.7em;display:none"></span></a>
 					<br>
 					<!--
 					<a id="secondTheme" href='javascript:ixmaps.newTheme("",RT_agibili_nonagibili_symbols,"clear"
@@ -103,6 +106,8 @@
 				<li>
 					<h4> &#9898; Marche - Contributi Autonoma Sistemazione</h4>
 					<span style="margin-left:0.5em">(fonte: <a href="http://www.regione.marche.it/Regione-Utile/Terremoto-Marche/Dati-sul-sisma/Contributi-Autonoma-Sistemazione-erogati" target="_blank">Regione Marche</a>)</span> stato 15.03.2017</h4>
+					<p class="comment">Questo dataset abbiamo (cristigalasso, guenter.richter) copiato il 15.03. dal sito della regione Marche; in seguito si poteva notare che nella lista prodotta sul sito ci sono cambiamenti 'strani' in quanto sono spariti voci ed interi comuni; qui comunque un'analisi della lista del 15.03.2017</p>
+					<p class="comment">Visto il cambiamenti, i temi più interessanti, x persona o x nuclei familiari, sono puramente demostrativi</p>
 					<div style="margin:0.5em 0.5em;">
 					<a class="button" href='javascript:ixmaps.newTheme("",RT_CONTRIBUTI_AUTONOMA_SISTEMAZIONE,"clear"
 					);' >totale x comune</a> |

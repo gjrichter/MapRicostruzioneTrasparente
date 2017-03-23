@@ -107,6 +107,7 @@
 			"green",
 			"red"],
 		"shadow": "true",
+		"showdata":"true",
 		"dbtable": "themeDataObj",
 		"dbtableUrl": "https://corsme.herokuapp.com/http://docs.google.com/spreadsheets/d/1dnppgKPXcvAkLWTgSqz6NlkgkKXMpfbsZxey1qnvjUM/export?format=csv",
 		"dbtableType": "csv",
@@ -129,7 +130,9 @@
 		"sizefield": "TOTALE",
 		"labelupper": "1:500000",
 		"fadenegative": "1",
-		"title": "EDIFICI_AGIBILI, NON AGIBILI, TOTALE"
+		"title": "EDIFICI_AGIBILI, NON AGIBILI",
+		"snippet":"le percentuali rispetto al totale non fanno 100% - vedi torte"
+
 		}
 	};
 
@@ -625,7 +628,7 @@
 	"field": "Numero_container",
 	"field100": "",
 	"style": {
-		"type": "CHART|BUBBLE|EQUIDISTANT|VALUES|ZEROISVALUE|NEGATIVEISVALUE|AGGREGATE|SUM",
+		"type": "CHART|LABEL|EQUIDISTANT|VALUES|ZEROISVALUE|NEGATIVEISVALUE|AGGREGATE|SUM",
 		"colorscheme": [
 			"1",
 			"RGB(210,227,244)",
@@ -639,8 +642,6 @@
 		"datacache": "true",
 		"itemfield": "Y|X",
 		"lookupfield": "Y|X",
-		"symbols": [
-			"square"],
 		"units": "",
 		"scale": "1",
 		"normalsizevalue":"1000",
