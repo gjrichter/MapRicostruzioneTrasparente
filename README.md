@@ -3,11 +3,11 @@ Piattaforma ixmaps è mappe per ricostruzione trasparente
 
 Repository del codice di una mappa interattiva (work in progress) per vedere vari dataset raccolti nel progetto Ricostruzione Trasparente.
 
-## La mappa interattiva si trova qui: [mappa interattiva](http://projects.ixmaps.com.s3-website-eu-west-1.amazonaws.com/MapRicostruzioneTrasparente/app/Ricostruzione%20Trasparente/)
+### La mappa interattiva si trova qui: [mappa interattiva](http://projects.ixmaps.com.s3-website-eu-west-1.amazonaws.com/MapRicostruzioneTrasparente/app/Ricostruzione%20Trasparente/)
 
 Non sono riuscito di servire la mappa direttamente da GitHub (raw) per qualche problema crossdomain, cosi ho fatto il hosting su un server mio. Ma tutto il codice della piattaforma e la configurazione si trovan su qui su GitHub.
 
-## la mappa 
+### La configurazione della mappa 
 
 La configurazione della mappa per RT si trova nella cartelle **app/Ricostruzione Trasparente** 
   * index.html - *inizia l'applicazione*
